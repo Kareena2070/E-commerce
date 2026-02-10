@@ -11,7 +11,7 @@ function Navbar() {
 
     return (
         <>
-            <div className='bg-yellow-300 w-full px-2 py-2 relative'>
+            <div className='bg-yellow-300 w-full px-2 py-2 relative shadow-md'>
 
                 <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
                     {/* Logo */}
@@ -37,7 +37,7 @@ function Navbar() {
                     {/* Search div */}
                     <div className='flex-1 mx-2 min-w-0'>
                         <div className='bg-gray-100 rounded-lg px-3 h-10 flex items-center w-full' >
-                            <input type="text" placeholder='Search anythings you are craving' className='bg-transparent flex-1 text-sm  w-full min-w-0' />
+                            <input type="text" placeholder='Search anythings you are craving' className='bg-transparent flex-1 text-sm  w-full min-w-0 outline-none' />
                             <Search />
                         </div>
                     </div>
