@@ -1,0 +1,72 @@
+import { Facebook, Instagram, Twitter , Linkedin, Phone, Mail, MapPin, Copyright } from 'lucide-react';
+function Footer() {
+    return (
+        <>
+            <footer className="bg-gray-100 lg:px-40 px-20 py-5 pb-6">
+                <div className='flex gap-5 py-5 px-10  items-center flex-col lg:flex-row'>
+                    <div className='flex flex-col gap-4'>
+                        {/* Logo */}
+                        <div className="flex  items-center gap-2 font-bold">
+                            <div className="bg-yellow-400 p-2 text-white rounded-lg">
+                                FOA
+                            </div>
+                            <p>FOA-Food</p>
+                        </div>
+
+                       <div className='flex flex-col gap-4'>
+                            <p>Your one-stop shop for groceries & essentials - delivered fast!</p>
+
+                            <div className='flex gap-5'>
+                                <Facebook /> <Instagram /> <Twitter /> <Linkedin />
+                            </div>
+                        </div> 
+                    </div>
+
+                   <div className='flex gap-5 justify-between items-center w-full flex-wrap lg:flex-nowrap'>
+                     <div>
+                        <div className='font-bold'>Useful Links</div>
+                        <div>
+                            <div>All Products</div>
+                            <div>Categories</div>
+                            <div>Track Order</div>
+                            <div>My Account</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div className='font-bold'>Partner</div>
+                        <div>
+                            <div>Sell on FOA-food</div>
+                            <div>Become a Rider</div>
+                            <div>Corporate</div>
+                            <div>Warehouse</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div className='font-bold'>Contact</div>
+                        <div>
+                            <div className='flex gap-2'> <Phone size={18} color='green'/>1800-123-4567</div>
+                            <div className='flex gap-2'> <Mail size={18} color='green'/> help@foafood.com</div>
+                            <div className='flex gap-2'><MapPin size={18} color='green'/> Gurugram, Haryana</div>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+
+                <div className='bg-gray-300 py-[1px]'></div>
+
+                <div className='flex justify-between py-5 px-10'>
+                    <div className='flex gap-1 items-center'><Copyright size={18} />2026 FOA-food. All rights reserved.</div>
+                    <div className='flex gap-3'>
+                        <p>Privacy</p>
+                        <p>Terms</p>
+                        <p>Refunds</p>
+                    </div>
+                </div>
+            </footer>
+        </>
+    );
+}
+
+export default Footer
