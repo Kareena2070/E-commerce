@@ -2,7 +2,7 @@ import { Facebook, Instagram, Twitter , Linkedin, Phone, Mail, MapPin, Copyright
 function Footer() {
     return (
         <>
-            <footer className="bg-gray-100 lg:px-40 px-20 py-5 pb-6">
+            <footer className="bg-gray-100 lg:px-40 px-10 py-5 pb-6">
                 <div className='flex gap-5 py-5 px-10  items-center flex-col lg:flex-row'>
                     <div className='flex flex-col gap-4'>
                         {/* Logo */}
@@ -24,7 +24,7 @@ function Footer() {
 
                    <div className='flex gap-5 justify-between items-center w-full flex-wrap lg:flex-nowrap'>
                      <div>
-                        <div className='font-bold'>Useful Links</div>
+                        <div className='font-bold mb-2'>Useful Links</div>
                         <div>
                             <div>All Products</div>
                             <div>Categories</div>
@@ -34,7 +34,7 @@ function Footer() {
                     </div>
 
                     <div>
-                        <div className='font-bold'>Partner</div>
+                        <div className='font-bold mb-2'>Partner</div>
                         <div>
                             <div>Sell on FOA-food</div>
                             <div>Become a Rider</div>
@@ -44,8 +44,8 @@ function Footer() {
                     </div>
 
                     <div>
-                        <div className='font-bold'>Contact</div>
-                        <div>
+                        <div className='font-bold mb-2'>Contact</div>
+                        <div className='flex flex-col gap-2'>
                             <div className='flex gap-2'> <Phone size={18} color='green'/>1800-123-4567</div>
                             <div className='flex gap-2'> <Mail size={18} color='green'/> help@foafood.com</div>
                             <div className='flex gap-2'><MapPin size={18} color='green'/> Gurugram, Haryana</div>
@@ -56,8 +56,8 @@ function Footer() {
 
                 <div className='bg-gray-300 py-[1px]'></div>
 
-                <div className='flex justify-between py-5 px-10'>
-                    <div className='flex gap-1 items-center'><Copyright size={18} />2026 FOA-food. All rights reserved.</div>
+                <div className='flex justify-between py-5 px-10  gap-5 flex-col lg:flex-row'>
+                    <div className='flex gap-1 items-center sm:text-wrap lg:whitespace-nowrap'><Copyright size={18} />2026 FOA-food. All rights reserved.</div>
                     <div className='flex gap-3'>
                         <p>Privacy</p>
                         <p>Terms</p>
