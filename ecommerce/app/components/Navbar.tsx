@@ -3,10 +3,12 @@
 import Link from 'next/link';
 import { MapPin, ChevronDown, Search, User, ShoppingCart, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { useAuth } from "../context/AuthContext";
 
 function Navbar() {
-    const isLoggedIn = true;
+    // const isLoggedIn = true;
     // const isLoggedIn = false;
+    const { user, logout } = useAuth();
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -45,13 +47,31 @@ function Navbar() {
 
                     {/* Login /account */}
 
-                    <div className='px-4 py-2 font-medium hidden sm:block'>
+                    {/* <div className='px-4 py-2 font-medium hidden sm:block'>
                         {isLoggedIn ? (
                             <Link href='/account' className="flex items-center gap-1 text-sm text-gray-700 "> <User size={14} />Account <ChevronDown size={14} /> </Link>
                         ) : (
                             <Link href="/login">Login</Link>
                         )}
-                    </div>
+                    </div> */}
+
+                    {user ? (
+                        <div className="flex items-center gap-2 text-sm text-gray-700">
+                            <User size={14} />
+                            <span>{user.name}</span>
+                            <button
+                                onClick={logout}
+                                className="text-red-500 text-xs ml-2"
+                            >
+                                Logout
+                            </button>
+                        </div>
+                    ) : (
+                        <div className="flex gap-3 text-sm">
+                            <Link href="/login">Login</Link>
+                            <Link href="/register">Register</Link>
+                        </div>
+                    )}
 
                     {/* Cart */}
 
@@ -86,7 +106,7 @@ function Navbar() {
 
                             <div className='bg-black w-full h-[1px]'></div>
                             {/* Account */}
-                            {isLoggedIn ? (
+                            {user ? (
                                 <Link href='/account' className="flex items-center gap-2 text-sm  "> <User size={14} />Account <ChevronDown size={14} /> </Link>
                             ) : (
                                 <Link href="/login">Login</Link>
