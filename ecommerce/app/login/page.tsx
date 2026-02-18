@@ -3,10 +3,11 @@
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "../context/AuthContext";
+import { useEffect } from "react";
 
 export default function LoginPage() {
-  const { login } = useAuth();
-  // const router = useRouter();
+  const { login, error, user } = useAuth();
+  const router = useRouter();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,9 +16,14 @@ export default function LoginPage() {
     e.preventDefault();
 
     login(email, password);
-
-    // router.push("/");
   };
+
+  useEffect(() => {
+  if (user) {
+    router.push("/");
+  }
+}, [user, router]);
+
 
   return (
     <div className="flex justify-center items-center h-screen">
@@ -26,6 +32,13 @@ export default function LoginPage() {
         className="bg-white p-6 rounded shadow w-80 flex flex-col gap-4"
       >
         <h2 className="text-xl font-bold text-center">Login</h2>
+
+        {/* 🔴 Error Message */}
+    {error && (
+      <div className="bg-red-100 text-red-600 px-3 py-2 rounded-md text-sm text-center">
+        {error}
+      </div>
+    )}
 
         <input
           type="email"
