@@ -4,7 +4,7 @@ import { Smartphone, Star } from "lucide-react";
 
 export default function DownloadApp() {
   return (
-    <section className="bg-black text-white py-14">
+    <section className="bg-black text-white py-14 px-4 md:px-24 lg:px-28">
       <div className="w-full mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-10">
         
         {/* Left Content */}

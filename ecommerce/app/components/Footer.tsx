@@ -2,8 +2,8 @@ import { Facebook, Instagram, Twitter , Linkedin, Phone, Mail, MapPin, Copyright
 function Footer() {
     return (
         <>
-            <footer className="bg-gray-100 lg:px-40 px-10 py-5 pb-6">
-                <div className='flex gap-5 py-5 px-10  items-center flex-col lg:flex-row'>
+            <footer className="bg-gray-100 px-4 md:px-24 lg:px-28 px-10 py-5 pb-6">
+                <div className='flex gap-5 py-5 px-2  items-center flex-col lg:flex-row'>
                     <div className='flex flex-col gap-4'>
                         {/* Logo */}
                         <div className="flex  items-center gap-2 font-bold">
