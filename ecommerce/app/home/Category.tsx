@@ -1,40 +1,8 @@
 import Image from "next/image";
+import { mockCategories } from "../services/categories";
 
 function Category() {
-  const categories = [
-    {
-      image: "/category/fruits-vegetables.png",
-      title: "Fruits & Vegetables",
-    },
-    {
-      image: "/category/dairy-breakfast.png",
-      title: "Dairy & Breakfast",
-    },
-    {
-      image: "/category/snacks-munchies.png",
-      title: "Snacks & Munchies",
-    },
-    {
-      image: "/category/cold-Drinks-Juices.png",
-      title: "Cold Drinks & Juices",
-    },
-    {
-      image: "/category/instant-Frozen.png",
-      title: "Instant & Frozen",
-    },
-    {
-      image: "/category/personal-Care.png",
-      title: "Personal Care",
-    },
-    {
-      image: "/category/home-Kitchen.png",
-      title: "Home & Kitchen",
-    },
-    {
-      image: "/category/baby-Care.png",
-      title: "Baby Care",
-    },
-  ];
+
 
   return (
     <section className="w-full bg-gray-50 py-8">
@@ -50,7 +18,7 @@ function Category() {
 
         {/* Categories */}
         <div className="flex gap-6 overflow-x-auto scrollbar-hide ">
-          {categories.map((category, index) => (
+          {mockCategories.map((category, index) => (
             <div
               key={index}
               className="flex flex-col items-center min-w-[110px] cursor-pointer group hover:text-green-600"
