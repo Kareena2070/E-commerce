@@ -7,6 +7,7 @@ import { useSearchParams } from "next/navigation";
 import EmptyState from "./EmptyState";
 import ProductGrid from "./ProductGrid";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import Link from "next/link";
 
 export default function CategoryPage() {
@@ -53,9 +54,10 @@ export default function CategoryPage() {
   }
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      {/* All the Categories */}
+    <main className="flex-1">
+        {/* All the Categories */}
 
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 py-3 flex gap-3 overflow-x-auto">
@@ -150,6 +152,8 @@ export default function CategoryPage() {
           <ProductGrid products={filteredProducts} />
         )}
       </div>
+    </main>
+    <Footer />
     </div>
   );
 }

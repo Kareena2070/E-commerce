@@ -44,7 +44,7 @@ export default function Bestsellers() {
         {/* Product Scroll */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
 
-          {mockProducts.map((product) => (
+          {mockProducts.slice(0, 6).map((product) => (
             <div
               key={product.id}
               className="bg-white rounded-xl shadow-sm border p-3"
